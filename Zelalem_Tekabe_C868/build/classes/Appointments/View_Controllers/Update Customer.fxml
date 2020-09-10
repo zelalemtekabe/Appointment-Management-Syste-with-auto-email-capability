@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="437.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Appointments.View_Controllers.UpdateCustomerController">
+   <children>
+      <TextField fx:id="txtName" layoutX="167.0" layoutY="55.0" />
+      <TextField fx:id="txtAddOne" layoutX="167.0" layoutY="91.0" />
+      <TextField fx:id="txtAddTwo" layoutX="167.0" layoutY="134.0" />
+      <ComboBox fx:id="cbxCity" layoutX="167.0" layoutY="174.0" onAction="#getCountryFromCity" prefWidth="150.0" />
+      <TextField fx:id="txtPostalCode" layoutX="167.0" layoutY="212.0" />
+      <TextField fx:id="txtPhoneNr" layoutX="168.0" layoutY="287.0" />
+      <Button fx:id="btnUpdateCustomer" layoutX="168.0" layoutY="375.0" mnemonicParsing="false" onAction="#saveUpdates" prefHeight="25.0" prefWidth="62.0" text="Save">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button fx:id="btnCancelCustomer" layoutX="249.0" layoutY="375.0" mnemonicParsing="false" onAction="#cancelUpdate" prefHeight="25.0" prefWidth="70.0" text="Cancel">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Text layoutX="64.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" wrappingWidth="119.13671875">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <Text layoutX="64.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postal Code" wrappingWidth="88.13670873641968">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <Text layoutX="64.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" wrappingWidth="88.13670873641968">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <Text layoutX="64.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address - 2" wrappingWidth="88.13670873641968">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <Text layoutX="64.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address - 1" wrappingWidth="70.13671875">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <Text layoutX="64.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="88.13671875">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <Text layoutX="64.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" wrappingWidth="101.13671875">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <Text layoutX="90.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Updating Customer Information" textAlignment="CENTER" wrappingWidth="246.13671875">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <TextField fx:id="txtCountry" blendMode="DARKEN" editable="false" layoutX="167.0" layoutY="248.0" />
+      <Text layoutX="64.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="101.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtEmailUpdate" layoutX="167.0" layoutY="331.0" />
+   </children>
+</AnchorPane>

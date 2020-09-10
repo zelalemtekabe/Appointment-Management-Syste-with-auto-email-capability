@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="527.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Appointments.View_Controllers.ReportsController">
+   <children>
+      <TabPane layoutX="462.0" layoutY="324.0" prefHeight="135.0" prefWidth="196.0" tabClosingPolicy="UNAVAILABLE" />
+      <TabPane layoutX="27.0" layoutY="64.0" prefHeight="395.0" prefWidth="737.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="By Month">
+               <content>
+                  <BarChart fx:id="barCrtByMonth" prefHeight="330.0" prefWidth="737.0">
+                    <xAxis>
+                      <CategoryAxis label="Month" side="BOTTOM" fx:id="xMonth" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yNoOfCustomers" label="No. of Customers" minorTickLength="1.0" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </content>
+            </Tab>
+          <Tab text="By Consultant">
+               <content>
+                  <TableView fx:id="viewByConsultant" prefHeight="366.0" prefWidth="720.0">
+                    <columns>
+                      <TableColumn fx:id="col_Consultant" prefWidth="160.0" text="Consultant Name" />
+                      <TableColumn fx:id="col_Customer" prefWidth="145.0" text="Customer Name" />
+                        <TableColumn fx:id="col_title" prefWidth="134.0" text="Appt. Title" />
+                        <TableColumn fx:id="col_start" minWidth="0.0" prefWidth="135.0" text="Start" />
+                        <TableColumn fx:id="col_end" prefWidth="159.0" text="End" />
+                    </columns>
+                  </TableView>
+               </content></Tab>
+            <Tab text="By Location">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="viewByLocation" layoutX="155.0" layoutY="14.0" prefHeight="321.0" prefWidth="425.0">
+                          <columns>
+                            <TableColumn fx:id="col_city" prefWidth="154.0" text="City" />
+                            <TableColumn fx:id="col_country" prefWidth="119.0" text="Country" />
+                              <TableColumn fx:id="col_NumberOfCustomers" prefWidth="153.0" text="Number of Customers" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="rptExit" layoutX="701.0" layoutY="470.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="33.0" prefWidth="63.0" text="Exit" />
+      <Text fx:id="dtTime" fill="#030303e3" layoutX="154.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DateTimeStamp">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="222.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports by Month, Consultant and Location">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="dtTime1" layoutX="27.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report generated on :" />
+   </children>
+</AnchorPane>

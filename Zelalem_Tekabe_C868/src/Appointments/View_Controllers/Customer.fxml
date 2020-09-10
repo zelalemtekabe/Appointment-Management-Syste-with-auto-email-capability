@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="370.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Appointments.View_Controllers.CustomerController">
+   <children>
+      <Button fx:id="addCustomer" layoutX="261.0" layoutY="323.0" mnemonicParsing="false" onAction="#customerDt" prefHeight="35.0" prefWidth="68.0" text="Add" />
+      <Button layoutX="366.0" layoutY="323.0" mnemonicParsing="false" onAction="#updateCustomer" prefHeight="35.0" prefWidth="68.0" text="Update" />
+      <Button layoutX="476.0" layoutY="323.0" mnemonicParsing="false" onAction="#delAction" prefHeight="35.0" prefWidth="68.0" text="Delete" />
+      <Button layoutX="886.0" layoutY="323.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="35.0" prefWidth="68.0" text="Exit" />
+      <TableView fx:id="custTable" layoutX="12.0" layoutY="69.0" prefHeight="246.0" prefWidth="955.0">
+        <columns>
+          <TableColumn fx:id="col_name" prefWidth="145.0" text="Name" />
+          <TableColumn fx:id="col_addOne" prefWidth="126.0" text="Address - 1" />
+            <TableColumn fx:id="col_addTwo" prefWidth="126.0" text="Address - 2" />
+            <TableColumn fx:id="col_city" prefWidth="100.0" text="City" />
+            <TableColumn fx:id="col_postalCode" text="Postal Code" />
+            <TableColumn fx:id="col_country" prefWidth="75.0" text="Country" />
+            <TableColumn fx:id="col_phoneNr" prefWidth="117.0" text="Phone Number" />
+            <TableColumn fx:id="col_email" prefWidth="185.0" text="Email" />
+        </columns>
+      </TableView>
+      <Text layoutX="48.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customers' Information" wrappingWidth="195.9999966621399">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <TextField fx:id="txtSearchItem" layoutX="553.0" layoutY="24.0" onMouseClicked="#clearSearch" prefHeight="25.0" prefWidth="164.0" promptText="Enter Customer Name" />
+      <Button fx:id="btnSearchCustomer" layoutX="728.0" layoutY="23.0" mnemonicParsing="false" onAction="#searchData" prefHeight="25.0" prefWidth="53.0" text="Search" />
+   </children>
+</AnchorPane>
